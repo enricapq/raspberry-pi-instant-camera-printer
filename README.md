@@ -1,3 +1,17 @@
+# Instant camera printer project
+
+<a href="https://www.raspberrypi.org"><img src="https://www.raspberrypi.org/wp-content/uploads/2012/03/raspberry-pi-logo.png" alt="Raspberry Pi Logo" align="left" style="margin-right: 25px" height=150></a>
+
+> Devices:
+
+> [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+
+> [Thermal printer]()
+
+
+This is a fork of [https://github.com/adafruit/zj-58](https://github.com/adafruit/zj-58) 
+
+
 zj-58
 =====
 

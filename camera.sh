@@ -7,26 +7,25 @@
 # photos path dir
 PHOTOS_DIR=/home/pi/raspberry-pi-instant-camera-printer/photos
 
-# Assign GPIO pins
-# Shutter: press to take a photo
+# assign GPIO pins
+# shutter: press to take a photo
 SHUTTER=16
-# Halt: press to turn off the Raspberry Pi
+# halt: press to turn off the Raspberry Pi
 HALT=21
-# LED_SHUTTER Blink when pressed
+# led for status
 LED_SHUTTER=27
-# LED_16 for photo taken
 LED_HALT=5
 
-# Initialize buttons GPIO states up (1) -> not pressed
+# initialize buttons GPIO states up -> not pressed
 gpio -g mode  $SHUTTER up
 gpio -g mode  $HALT    up
 
-# Initialize led GPIO states out -> led off, in -> led on
+# initialize led GPIO states out -> led off, in -> led on
 gpio -g mode  $LED_SHUTTER  out
 gpio -g mode  $LED_HALT     in
 
 
-# Flash LED_SHUTTER 20 times on startup to indicate ready state
+# blink LED_SHUTTER 20 times on startup to indicate ready state
 for i in `seq 1 20`;
 do
 	gpio -g write $LED_SHUTTER 1
@@ -35,14 +34,15 @@ do
 	sleep 0.2
 done   
 
-# Keep monitoring the buttons
+# keep monitoring the buttons
 while :
 do
         # keep the led on, not blinking, until the shutter is pressed
         gpio -g write $LED_SHUTTER 1
-	# check when shutter button is pressed (0, not pressed 1)
+	# check when shutter button is pressed (pressed 0, not pressed 1)
 	if [ $(gpio -g read $SHUTTER) -eq 0 ]; then
 		ID_PHOTO=$PHOTOS_DIR/photo_$(date +%s).jpg
+		# capture photo and send to printer
 		# -co contrast -br brightness -ex exposure -sh sharpness 
 		# -sa saturation -awb white balance -drc dark for low light
 		# -n no preview -t time to shuts down
@@ -57,11 +57,11 @@ do
                         gpio -g write $LED_SHUTTER 0
                         sleep 0.5
                 done  
-		# Wait for user to release button before resuming
+		# wait for user to release button before resuming
 		while [ $(gpio -g read $SHUTTER) -eq 0 ]; do continue; done
 	fi
 
-	# Check for halt button
+	# check when halt button is pressed (0)
 	if [ $(gpio -g read $HALT) -eq 0 ]; then
                 for i in `seq 1 6`; 
                 do
@@ -70,7 +70,7 @@ do
                         gpio -g write $LED_SHUTTER 0
                         sleep 0.1
                 done 
-		# Must be held for 2+ seconds before shutdown
+		# must be held for 2+ seconds before shutdown
 		starttime=$(date +%s)
 		while [ $(gpio -g read $HALT) -eq 0 ]; do
                         gpio -g write $LED_SHUTTER 0

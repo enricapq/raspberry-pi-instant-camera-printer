@@ -1,15 +1,27 @@
-# Instant camera printer project
-
 <a href="https://www.raspberrypi.org"><img src="https://www.raspberrypi.org/wp-content/uploads/2012/03/raspberry-pi-logo.png" alt="Raspberry Pi Logo" align="left" style="margin-right: 25px" height=150></a>
+# Raspberry Pi instant photo printer 
 
-> Devices:
+This project is aimed for using a Raspberry Pi as an instant photo printer device.
 
-> [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+Take a photo pressing a button and have it printed with a thermal printer.
 
-> [Thermal printer]()
+Photos are saved locally. A secondary button is added for shutting down the Raspberry Pi.
 
+> Components:
+> * [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+> * [Mini thermal printer](https://www.adafruit.com/product/597)
+> * 2 x LED Tactile Button
+> * Breadboard
+> * Jumper Jerky
+> * 5-9VDC @ 1.5Amp power supply or 4 x AA Battery Holder with On/Off Switch
+> * thermal paper
+> * cardboard box
 
-This is a fork of [https://github.com/adafruit/zj-58](https://github.com/adafruit/zj-58) 
+<p align="center">
+<img src="https://github.com/enricapq/raspberry-pi-instant-camera-printer/blob/Add-image/misc/raspberry-pi-instant-camera-printer.jpg" alt="raspberry-pi-instant-camera-printer" width=600 height=387>
+</p>
+
+This is a fork of [https://github.com/adafruit/zj-58](https://github.com/adafruit/zj-58)
 
 
 zj-58

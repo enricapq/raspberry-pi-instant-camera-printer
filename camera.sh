@@ -63,8 +63,6 @@ do
                         sleep 0.5
                 done  
 		
-		sleep 1
-		
 		# Wait for user to release button before resuming
 		while [ $(gpio -g read $SHUTTER) -eq 0 ]; do continue; done
 	fi

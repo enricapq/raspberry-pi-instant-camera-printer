@@ -1,5 +1,5 @@
 <a href="https://www.raspberrypi.org"><img src="https://www.raspberrypi.org/wp-content/uploads/2012/03/raspberry-pi-logo.png" alt="Raspberry Pi Logo" align="left" style="margin-right: 25px" height=150></a>
-# Raspberry Pi instant camera printer 
+# Raspberry Pi instant photo printer 
 
 This project is aimed for using a Raspberry Pi as an instant photo printer device.
 

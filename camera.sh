@@ -70,7 +70,7 @@ do
                         gpio -g write $LED_SHUTTER 0
                         sleep 0.1
                 done 
-		# Must be held for 2+ seconds before shutdown is run...
+		# Must be held for 2+ seconds before shutdown
 		starttime=$(date +%s)
 		while [ $(gpio -g read $HALT) -eq 0 ]; do
                         gpio -g write $LED_SHUTTER 0

@@ -1,6 +1,5 @@
-# Raspberry Pi instant camera printer 
-
 <a href="https://www.raspberrypi.org"><img src="https://www.raspberrypi.org/wp-content/uploads/2012/03/raspberry-pi-logo.png" alt="Raspberry Pi Logo" align="left" style="margin-right: 25px" height=150></a>
+# Raspberry Pi instant camera printer 
 
 > Components:
 > * [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)

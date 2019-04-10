@@ -1,15 +1,21 @@
-# Instant camera printer project
+# Raspberry Pi instant camera printer 
 
 <a href="https://www.raspberrypi.org"><img src="https://www.raspberrypi.org/wp-content/uploads/2012/03/raspberry-pi-logo.png" alt="Raspberry Pi Logo" align="left" style="margin-right: 25px" height=150></a>
 
-> Devices:
+> Components:
+> * [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+> * [Mini thermal printer](https://www.adafruit.com/product/597)
+> * 2 x LED Tactile Button
+> * Breadboard
+> * Jumper Jerky
+> * 5-9VDC @ 1.5Amp power supply or 4 x AA Battery Holder with On/Off Switch
+> * cardboard box
 
-> [Raspberry Pi 3 Model B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/)
+<p align="center">
+<img src="https://github.com/enricapq/raspberry-pi-instant-camera-printer/blob/Add-image/misc/raspberry-pi-instant-camera-printer.jpg" alt="raspberry-pi-instant-camera-printer" width=600 height=387>
+</p>
 
-> [Thermal printer]()
-
-
-This is a fork of [https://github.com/adafruit/zj-58](https://github.com/adafruit/zj-58) 
+This is a fork of [https://github.com/adafruit/zj-58](https://github.com/adafruit/zj-58)
 
 
 zj-58
